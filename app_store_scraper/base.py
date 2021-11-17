@@ -192,7 +192,7 @@ class Base:
                 self._parse_next()
                 if self._request_offset is None or self._fetched_count >= how_many:
                     break
-                if type(sleep) is int or type(sleep) is float:
+                if sleep and (type(sleep) is int or type(sleep) is float):
                     time.sleep(sleep)
         except KeyboardInterrupt:
             logger.error("Keyboard interrupted")
