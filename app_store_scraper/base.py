@@ -111,7 +111,7 @@ class Base:
         headers=None,
         params=None,
         total=3,
-        backoff_factor=3,
+        backoff_factor=5,
         status_forcelist=[404, 429],
     ) -> requests.Response:
         retries = Retry(
