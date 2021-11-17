@@ -198,6 +198,7 @@ class Base:
             logger.error("Keyboard interrupted")
         except Exception as e:
             logger.error(f"Something went wrong: {e}")
+            raise e
         finally:
             self._log_status()
             self._fetched_count = 0
